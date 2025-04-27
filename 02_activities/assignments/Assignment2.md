@@ -45,6 +45,8 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
 
@@ -54,7 +56,12 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+ Type 1 is when you override it. 
+ So I would just keep the table the same as I had in my diagram, which is one row per customer ID. 
+ 
+ For type 2:
+  I will create multiple rows per customer ID with two additional columns, start and end date. 
+  And to figure out the most recent customer address you could always query null on end date. 
 ```
 
 ***
